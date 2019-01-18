@@ -1,0 +1,29 @@
+<h3>World</h3>
+<span *ngIf="ShowFlag">
+  <div>
+    <label>
+      XLength:
+      <input [(ngModel)]="XLength" type="number">
+      cm
+    </label>
+  </div>
+  <div *ngIf="XLengthFlag">Please input a number.</div>
+  <div>
+    <label>
+      YLength:
+      <input [(ngModel)]="YLength" type="number">
+      cm
+    </label>
+  </div>
+  <div *ngIf="YLengthFlag">Please input a number.</div>
+  <div>
+    <label>
+      ZLength:
+      <input [(ngModel)]="ZLength" type="number">
+      cm
+    </label>
+  </div>
+  <div *ngIf="ZLengthFlag">Please input a number.</div>
+  <button (click)="Inputjudge()">Submit</button>
+</span>
+<button (click)="Showjudge()">{{ShowText}}</button>

@@ -1,0 +1,30 @@
+<h3>Scanner</h3>
+<span *ngIf="ShowFlag">
+  <div>
+    <label>
+      Scanner type:
+      <select name="ScannerType"  [(ngModel)]="ScannerType" (ngModelChange)="ChooseScannerType($event)">
+        <option value=""></option>
+        <option value="scanner">scanner</option>
+        <option value="CTscanner">CTscanner</option>
+        <option value="CPET">CPET</option>
+        <option value="cylindricalPET">cylindricalPET</option>
+        <option value="SPECThead">SPECThead</option>
+        <option value="ecat">ecat</option>
+        <option value="ecatAccel">ecatAccel</option>
+        <option value="OPET">OPET</option>
+        <option value="OpticalSystem">OpticalSystem</option>
+      </select>
+    </label>
+  </div>
+  <app-setscanner *ngIf="scannerflag"></app-setscanner>
+  <app-set-ctscanner *ngIf="CTscannerflag"></app-set-ctscanner>
+  <app-setcylindrical-pet *ngIf="cylindricalPETflag"></app-setcylindrical-pet>
+  <app-set-cpet *ngIf="CPETflag"></app-set-cpet>
+  <app-set-specthead *ngIf="SPECTheadflag"></app-set-specthead>
+  <app-setecat *ngIf="ecatflag"></app-setecat>
+  <app-setecat-accel *ngIf="ecatAccelflag"></app-setecat-accel>
+  <app-set-opet *ngIf="OPETflag"></app-set-opet>
+  <app-set-optical-system *ngIf="OpticalSystemflag"></app-set-optical-system>
+</span>
+<button (click)="Showjudge()">{{ShowText}}</button>
